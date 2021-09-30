@@ -30,6 +30,9 @@ module.exports = {
   		new HtmlWebpackPlugin({
   		template: path.resolve(__dirname, 'index.html')
   		}),
+		new MiniCssExtractPlugin({
+			filename: 'css/[name].css'
+		}),
   	],
   	//增加一個給devserver的設定
   	devServer: {

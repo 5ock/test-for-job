@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './assets/less/global.less'
+
+import SideNav from './components/sideNav'
+import Main from './components/main'
+
+const drawerWidth = 240
 
 const App = () => {
-    return <div>test1</div>
+    const [ curItem, setCurItem ] = useState('')
+    return (<>
+        <SideNav onClick={item => setCurItem(item)}/>
+        <Main />
+    </>)
 }
 
 export default App
