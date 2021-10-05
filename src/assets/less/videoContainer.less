@@ -1,0 +1,123 @@
+.video-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #a8a8a8;
+    box-sizing: border-box;
+    .video-player {
+        width: inherit;
+        height: 500px;
+        line-height: 500px;
+        text-align: center;
+    }
+    .ptz-controller {
+        background: black;
+        color: #dadada;
+        .popLeftPanel, .hideLeftPanel {
+            cursor: pointer;
+            position: absolute;
+            // right: 20px;
+            z-index: 9;
+            top: 35vh;
+            font-size: 16px;
+            padding: 10px 4px 10px 6px;
+            border: 1px gray solid;
+            border-radius: 3px 0px 0px 3px;
+            // &:hover {    
+            //     background: rgb(180, 180, 180,0.2)
+            // }
+        }
+        .hideLeftPanel {
+            right: 339px;
+        }
+        .popLeftPanel {
+            right: 24px
+        }
+        .ptz-panel {
+            border: grey 1px solid;
+            box-sizing: border-box;
+            float: right;
+            width: 315px;
+            height: calc(~"100vh - 276px");
+            position: relative;
+            padding: 10px;
+            z-index: 999;
+            font-size: 14px;
+            .mt4 {
+                margin-top: 4px;
+            }
+            .divider-w {
+                height: 1px;                
+                width: 100%;
+                background-color: #fff;
+                margin: 5px 0;
+            }
+            .preset-block {
+                font-weight: bold;
+                padding: 5px 0;
+                .preset-select {
+                    width: 240px;
+                    color: #000;
+                    padding-top: 1px;
+                    padding-bottom: 1px;
+                    height: 30px;
+                }
+                .presetIcon {
+                    font-size: 19px;
+                    position: relative;
+                    top: 3px;
+                    padding-left: 9px;
+                    &:hover {
+                        color: #5e6fd9;
+                        cursor: pointer;
+                    }
+                }
+                .PTZbutton {
+                    width: calc(~'50% - 2.5px');
+                    border: 0;
+                    border-radius: 2px;
+                    height: 30px;
+                    opacity: .9;
+                    &.presetGotoBtn {
+                        background: #5e6fd9;
+                        color: white;
+                        margin-left: 5px;
+                    }
+                    &:hover {
+                        opacity: 1;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+
+            .direction-block {
+                .direction-btn-block {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 10px auto;
+                    width: 231px;
+                    color: #000;
+                    text-align: center;
+                    line-height: 57px;
+                    .direction-btn {
+                        background-color: #a8a8a8;
+                        width: 75px;
+                        height: 55px;
+                        border: 1px solid #ccc;
+                        &.disable {
+                            opacity: .4;
+                            &:hover{
+                                cursor: not-allowed;
+                            }
+                        }
+                        &:hover{
+                            background: #e5e5e5;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
