@@ -6,8 +6,8 @@ import HookRedux from './hookRedux'
 
 const Main = React.memo(() => {
     return (<div id='main'> 
-        {/* <VideoAndPTZ /> */}
-        <HookRedux />
+        <VideoAndPTZ />
+        {/* <HookRedux /> */}
     </div>)
 })
 

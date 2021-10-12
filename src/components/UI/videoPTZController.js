@@ -25,12 +25,12 @@ class VideoPTZControllar extends React.Component {
         return (<div className={'ptz-controller'}>
             { isShowPTZPanel
             ? [
-                <i  className={cx('fa', 'fa-chevron-right hideLeftPanel')}
+                <i key='hideleft' className={cx('fa', 'fa-chevron-right hideLeftPanel')}
                     onClick={this.handleShowPTZPanel}
                     aria-hidden="true" />,
-                <PtzControlPanel />
+                <PtzControlPanel key='control' />
             ]
-            : <i  className={cx('fa', 'fa-chevron-left popLeftPanel')}
+            : <i className={cx('fa', 'fa-chevron-left popLeftPanel')}
                 onClick={this.handleShowPTZPanel}
                 aria-hidden="true" />
             }

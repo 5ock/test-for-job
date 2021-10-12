@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setCount, setTodoList } from '../../redux/app'
 
 const AddTodo = React.memo(() => {
-    // get redux data
+    // map state to props
     const app = useSelector(state => state.app)
     const dispatch = useDispatch()
 
@@ -22,7 +22,7 @@ const AddTodo = React.memo(() => {
     const handleReset = () => {
         dispatch(setTodoList([]))
         dispatch(setCount(0))
-        setItem()
+        setItem('')
     }
 
     return (<>
