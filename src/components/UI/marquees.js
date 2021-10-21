@@ -102,7 +102,8 @@ const Marquees = React.memo((props) => {
 
     const moveDown = () => {
         let firstLi = _ul.current.children[0]
-        firstLi.style.cssText = `margin: -${rowHeight}px 0 0 0; transition: all ${speed}ms;`
+        firstLi.style.margin = `-${rowHeight}px 0 0 0`
+        firstLi.style.transition = `all ${speed}ms`
 
         setTimeout(() => {
             setMarqueeList(list => {
@@ -113,7 +114,8 @@ const Marquees = React.memo((props) => {
                 newMarqueeList.shift()
                 return newMarqueeList
             })
-            firstLi.style.cssText = ''
+            firstLi.style.margin = null
+            firstLi.style.transition = null
         }, speed)
     }
 
@@ -158,10 +160,12 @@ const Marquees = React.memo((props) => {
         width: '200px',
         overflow: 'hidden',
         whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis'
+        textOverflow: 'ellipsis',
+        cursor: 'default'
     }
 
     return (<ul
+        id='g-marquess'
         className={cx('g-marquees', className)}
         ref={_ul}
         onMouseEnter={pause}

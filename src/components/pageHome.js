@@ -7,7 +7,7 @@ const Home = React.memo(() => {
     <Marquees
         dataList={[
             {
-                description: 'Test for job ...',
+                description: 'Test for job ...........................asdfasdfasdfasdfasdf...........',
                 dateTime: '1666059300000'
             },
             {
